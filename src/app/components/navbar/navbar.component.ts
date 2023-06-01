@@ -122,4 +122,8 @@ export class NavbarComponent implements OnInit {
       }
       return 'Dashboard';
     }
+    logout(): void{
+        //TODO
+        this.router.navigate(['/login']);
+    }
 }

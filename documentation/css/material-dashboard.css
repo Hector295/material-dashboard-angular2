@@ -8854,7 +8854,7 @@ button:focus {
   .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .card.bg-primary,
   .card.card-rotate.bg-primary .front,
   .card.card-rotate.bg-primary .back {
-    background: linear-gradient(60deg, #ab47bc, #8e24aa); }
+    background: linear-gradient(60deg, #3245c0, #000387); }
   .card .card-header-info .card-icon,
   .card .card-header-info .card-text,
   .card .card-header-info:not(.card-header-icon):not(.card-header-text), .card.bg-info,
@@ -13288,7 +13288,7 @@ h2.title {
   background-color: #000; }
 
 .fixed-plugin .badge-azure {
-  background-color: #2CA8FF; }
+  background-color: #000387; }
 
 .fixed-plugin .badge-green {
   background-color: #18ce0f; }

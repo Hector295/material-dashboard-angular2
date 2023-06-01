@@ -33,3 +33,14 @@
   position: absolute;
   width: 260px;
 }
+
+.custom-container {
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  height: 100vh; /* Altura del contenedor */
+  background-image: url('../img/login.jpg'); /* Ruta a la imagen de fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
