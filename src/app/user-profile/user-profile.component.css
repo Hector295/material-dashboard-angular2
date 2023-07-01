@@ -1,0 +1,33 @@
+.custom-file-input {
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+}
+
+.custom-file-label {
+    display: inline-block;
+    border: none;
+    background: #f44336;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.custom-file-label::after {
+    content: '';
+}
+
+.custom-file-label::before {
+    content: '';
+    pointer-events: none;
+}
+
+.preview-image {
+    width: 200px;  /* Ancho deseado para la imagen */
+    height: 200px; /* Alto deseado para la imagen */
+    object-fit: cover; /* Ajustar imagen dentro del contenedor manteniendo la relación de aspecto */
+}

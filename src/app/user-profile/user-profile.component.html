@@ -78,6 +78,45 @@
                                     </div> -->
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="file" id="file-input" class="custom-file-input" (change)="onFileSelected($event)">
+                                    <label for="file-input" class="custom-file-label">{{ selectedFile?.name || 'Seleccionar archivo' }}</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div *ngIf="selectedFile">
+                                        <img [src]="selectedImageUrl" alt="Imagen seleccionada" class="preview-image">
+                                    </div>
+                                    <div *ngIf="!selectedFile">
+                                        <img [src]="defaultImageUrl" alt="Imagen por defecto" class="preview-image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="file" id="pdf-input" accept=".pdf" class="custom-file-input" (change)="onPdfSelected($event)">
+                                    <label for="pdf-input" class="custom-file-label">{{ selectedPdf?.name || 'Seleccionar archivo PDF' }}</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <button *ngIf="selectedPdf" type="button" class="btn btn-primary" data-toggle="modal" data-target="#pdfModal">Ver miniatura</button>
+                                </div>
+                                <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="pdfModalLabel">Vista completa del PDF</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ngx-extended-pdf-viewer [src]="pdfUrl" [useBrowserLocale]="true"
+                                                                         [minifiedJSLibraries]="false" [height]="'500px'"></ngx-extended-pdf-viewer>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile
                             </button>
                             <div class="clearfix"></div>

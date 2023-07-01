@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @NgModule({
     imports: [
@@ -24,6 +25,7 @@ import {MatInputModule} from "@angular/material/input";
         MatButtonModule,
         MatFormFieldModule,
         MatInputModule,
+        NgxExtendedPdfViewerModule
     ],
   declarations: [
     AppComponent,
